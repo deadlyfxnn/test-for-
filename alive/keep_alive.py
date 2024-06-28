@@ -9,7 +9,7 @@ def hello():
 
 
 def run():
-  app.run()
+  app.run(host='0.0.0.0')
 
 def stay_alive():
   t = Thread(target=run)

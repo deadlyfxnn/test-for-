@@ -1,5 +1,6 @@
 import discord
 import os
+from keep_alive import stay_alive 
 
 from discord import activity
 
@@ -16,5 +17,5 @@ if __name__ == "__main__":
     if filename.endswith(".py"):
       bot.load_extension(f"cogs.{filename[:-3]}")
 
-
+stay_alive()
 bot.run(os.environ['TOKEN'])
